@@ -1,6 +1,6 @@
 {
     "name": "@ts-core/backend-nestjs-language",
-    "version": "10.0.1",
+    "version": "10.0.2",
     "description": "Classes for NestJS Language",
     "scripts": {},
     "author": {
