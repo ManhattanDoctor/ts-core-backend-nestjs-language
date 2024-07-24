@@ -1,0 +1,38 @@
+{
+    "name": "@ts-core/backend-nestjs-language",
+    "version": "10.0.1",
+    "description": "Classes for NestJS Language",
+    "scripts": {},
+    "author": {
+        "name": "Renat Gubaev",
+        "email": "renat.gubaev@gmail.com"
+    },
+    "main": "./cjs/public-api.js",
+    "module": "./esm/public-api.js",
+    "exports": {
+        ".": {
+            "import": "./esm/public-api.js",
+            "require": "./cjs/public-api.js"
+        }
+    },
+    "license": "ISC",
+    "dependencies": {
+        "@nestjs/swagger": "^7.1.15",
+        "@ts-core/language": "~3.0.28",
+        "@ts-core/backend-nestjs": "~10.0.0"
+    },
+    "devDependencies": {
+        "gulp-npm-module-publisher": "^3.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ManhattanDoctor/ts-core-backend-nestjs-language.git"
+    },
+    "keywords": [
+        "typescript"
+    ],
+    "bugs": {
+        "url": "https://github.com/ManhattanDoctor/ts-core-backend-nestjs-language/issues"
+    },
+    "homepage": "https://github.com/ManhattanDoctor/ts-core-backend-nestjs-language#readme"
+}
