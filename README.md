@@ -1,2 +1,2 @@
 # backend-nestjs-language
-Classes for NestJS OpenId
+Classes for NestJS Language
