@@ -13,13 +13,18 @@ export class LanguageModule {
     // --------------------------------------------------------------------------
 
     public static forRoot(settings: ILanguageModuleSettings): DynamicModule {
+        let { path, projects, loadRawFunction } = settings;
+        if (_.isNil(loadRawFunction)) {
+            loadRawFunction = LanguageLoadTranslationRawFunction;
+        }
+
         let imports: Array<Type> = [CacheModule];
         let providers: Array<Provider> = [
             {
                 provide: LanguageProjects,
                 useFactory: async () => {
-                    let item = new LanguageProjects(LanguageLoadTranslationRawFunction);
-                    await item.load(settings.path, settings.projects);
+                    let item = new LanguageProjects(loadRawFunction);
+                    await item.load(path, projects);
                     return item;
                 }
             }
@@ -36,6 +41,7 @@ export class LanguageModule {
 export interface ILanguageModuleSettings {
     path: string;
     projects: Array<ILanguageProjectSettings>;
+    loadRawFunction?: <T = any>(path: string, project: string, locale: string, prefixes: Array<string>) => Promise<T>;
 }
 
 export async function LanguageLoadTranslationRawFunction<T = any>(path: string, project: string, locale: string, prefixes: Array<string>): Promise<T> {
