@@ -1,7 +1,7 @@
 {
     "name": "@ts-core/backend-nestjs-language",
     "version": "11.0.2",
-    "description": "Classes for NestJS Language",
+    "description": "NestJS module for internationalization (i18n) of backend applications: loads translations from files and serves them to clients with caching",
     "scripts": {},
     "author": {
         "name": "Renat Gubaev",
@@ -29,7 +29,16 @@
         "url": "git+https://github.com/ManhattanDoctor/ts-core-backend-nestjs-language.git"
     },
     "keywords": [
-        "typescript"
+        "typescript",
+        "nestjs",
+        "i18n",
+        "internationalization",
+        "localization",
+        "translation",
+        "language",
+        "locale",
+        "backend",
+        "cache"
     ],
     "bugs": {
         "url": "https://github.com/ManhattanDoctor/ts-core-backend-nestjs-language/issues"
